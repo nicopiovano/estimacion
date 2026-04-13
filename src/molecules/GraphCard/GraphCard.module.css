@@ -1,8 +1,9 @@
 .graphCard {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 12px;
   min-width: 160px;
+  height: 100%;
 }
 
 .top {
@@ -14,25 +15,32 @@
 .meta {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 4px;
 }
 
 .cardTitle {
   font-size: 0.72rem;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--color-text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.09em;
 }
 
 .cardSubtitle {
-  font-size: 0.72rem;
-  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
 }
 
 .icon {
-  font-size: 1.2rem;
-  opacity: 0.7;
+  min-width: 44px;
+  padding: 8px 12px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-bg);
+  color: var(--color-accent-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.08em;
 }
 
 .valueRow {
@@ -42,24 +50,39 @@
 }
 
 .value {
-  font-family: var(--font-serif);
-  font-size: 1.65rem;
-  font-weight: 700;
+  font-family: var(--font-sans);
+  font-size: clamp(1.9rem, 3vw, 2.45rem);
+  font-weight: 800;
   color: var(--color-text);
-  line-height: 1;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
 }
 
 .unit {
   font-size: 0.8rem;
   color: var(--color-text-muted);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .trend {
-  font-size: 0.75rem;
-  font-weight: 500;
+  width: fit-content;
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: var(--radius-full);
 }
 
-.up { color: var(--color-success); }
-.down { color: var(--color-danger); }
-.neutral { color: var(--color-text-muted); }
+.up {
+  color: var(--color-success);
+  background: var(--color-success-bg);
+}
+
+.down {
+  color: var(--color-danger);
+  background: var(--color-danger-bg);
+}
+
+.neutral {
+  color: var(--color-text-muted);
+  background: rgba(80, 98, 103, 0.08);
+}

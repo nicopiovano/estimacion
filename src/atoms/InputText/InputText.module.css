@@ -1,27 +1,28 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 8px;
   width: 100%;
 }
 
 .label {
-  font-size: 0.82rem;
-  font-weight: 500;
+  font-size: 0.76rem;
+  font-weight: 700;
   color: var(--color-text-secondary);
-  letter-spacing: 0.01em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .input {
   width: 100%;
-  padding: 9px 13px;
-  border: 1.5px solid var(--color-border);
+  padding: 14px 16px;
+  border: 1px solid transparent;
   border-radius: var(--radius-md);
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--color-text);
-  background: rgba(250,248,245,0.9);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  background: var(--color-surface-soft);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
   resize: vertical;
   box-sizing: border-box;
 }
@@ -30,8 +31,9 @@
 
 .input:focus {
   outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(181,149,106,0.15);
+  background: var(--color-surface-strong);
+  border-color: rgba(27, 99, 153, 0.18);
+  box-shadow: 0 0 0 3px rgba(27, 99, 153, 0.14);
 }
 
 .input:disabled {

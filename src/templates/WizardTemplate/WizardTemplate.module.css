@@ -1,35 +1,44 @@
 .page {
   min-height: 100vh;
-  background: linear-gradient(160deg, #FAF7F0 0%, #F3E9D6 100%);
+  background:
+    radial-gradient(circle at top left, rgba(27, 99, 153, 0.16), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(109, 93, 64, 0.08), transparent 24%);
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 36px 16px;
+  padding: 32px 18px 48px;
 }
 
 .container {
   width: 100%;
-  max-width: 780px;
+  max-width: 1080px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 20px;
 }
 
 .title {
   margin: 0;
-  text-align: center;
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 700;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 800;
   color: var(--color-text);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.04em;
+  max-width: 12ch;
 }
 
 .stepper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0;
+  width: fit-content;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.62);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-sm);
 }
 
 .stepItem {
@@ -38,16 +47,16 @@
 }
 
 .stepCircle {
-  width: 28px;
-  height: 28px;
+  width: 34px;
+  height: 34px;
   border-radius: var(--radius-full);
-  background: var(--color-bg-muted);
+  background: rgba(80, 98, 103, 0.09);
   color: var(--color-text-muted);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.78rem;
+  font-weight: 700;
   flex-shrink: 0;
   transition: background 0.25s, color 0.25s, box-shadow 0.25s;
 }
@@ -56,32 +65,60 @@
 .active {
   background: var(--color-accent-dark);
   color: #fff;
-  box-shadow: 0 0 0 4px rgba(181,149,106,0.22);
+  box-shadow: 0 0 0 5px rgba(27, 99, 153, 0.14);
 }
 
 .stepLabel {
-  font-size: 0.72rem;
+  font-size: 0.76rem;
   color: var(--color-text-muted);
-  margin: 0 7px;
+  margin: 0 10px;
   white-space: nowrap;
 }
 
-.activeLabel { color: var(--color-accent-dark); font-weight: 500; }
+.activeLabel { color: var(--color-accent-dark); font-weight: 700; }
 
 .connector {
-  width: 36px;
-  height: 1.5px;
-  background: var(--color-border);
+  width: 44px;
+  height: 1px;
+  background: rgba(80, 98, 103, 0.18);
   flex-shrink: 0;
 }
 
 .connectorDone { background: var(--color-accent); }
 
 .body {
-  background: rgba(251,249,245,0.88);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(221,213,196,0.55);
-  border-radius: var(--radius-xl);
-  padding: 28px;
+  background: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: clamp(24px, 4vw, 40px);
+  padding: clamp(22px, 4vw, 36px);
   box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding-top: 20px;
+  }
+
+  .container {
+    gap: 16px;
+  }
+
+  .title {
+    max-width: none;
+  }
+
+  .stepper {
+    width: 100%;
+    overflow-x: auto;
+    padding: 12px 14px;
+  }
+
+  .stepLabel {
+    display: none;
+  }
+
+  .connector {
+    width: 28px;
+  }
 }

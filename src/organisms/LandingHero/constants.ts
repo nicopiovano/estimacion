@@ -1,0 +1,20 @@
+export const AVATARS = [
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuDo2eRTWnuEpyXSOtpLvASWngyrRMsY0kjAacEmK_9zdJjGj2vcuQNfrwPJxPTV_18q0kyKAt-bWLTbXybIA01IB_0NYYXEBSJYLFo4nkP6cAqR_VDT4hvU_AmNS8CAuqUEiDo5YscnLU1BJiLCYTcBnRc5dhqmYLWjeS1h5bOxpApaY1LvpFtLzl8Vpgj5fPEMfIL1NfSR4z1eJ3WuAwTveNd3amUgB29hcDfxvMqVa62fnH_s0t5pxib0l3-5QpKb-KZgPNQlaX0",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuBkchnuounbUGJwAwWy2m0xCKPd9OUFvTz3j7d5LYl7pD6rso15jkIFrD1ruKiHAsoBt7GgdpuMdNbnlrmpSLGZkXzDOxvOISWbL9vkkxkEgl3B7Sk_z-XkheMCa6Bk-FGRugTTt83GzvAQ4pHwtKs9zBqyIjdEgZijfVnLFMRyPOviDQmaMf6nQt089Q0IllKGOZvmfA5sGaj1ElXLBjGqDklp4sqdES8Ocwbc4FZN4dS6CVUOKdRDewsIyWFYHpIPTySTxLKQMHQ",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuARvsr1habIv9CCqZ3eT2BSspw09sBEqNN0GH87i2mg5U_4LOvnTNokSI5tOUedT2T0yePwBYRxExMH0vohPgMLJrF_SDI4oJbc5iCgYI5LzQp9R1ErDgfgfuaM_-kCsAeK0JeIoXoOt2kkxeUquNy6EqnT_fWj-FHOTNRQzjFi69zw8dYiZGt1RwFvza-fzanwsYYZ9dUO3rTy_IvuhqkY0ugGKNCuWL6uEjdpBEQrbiMBvXpffq6YZ_ssDjIUNULyFGsnqlDJXnk",
+];
+
+export const COLLAGE_IMAGES = [
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAM-jrAYxCz2l8KbxXKcv40zVBKOvRrw52AgQ8ejWpHBpT4u4PWx3ZSh_OADaNA_u4ntaMwwGOvoAszx6jqW6HJTW4kx2v4lTNeF-FXdz3HnXWckO7U-7rFt_jT_JLNBJ0YyxCPtlKhHF7uEHDSP2L_1HyVXG71ldrpaYS9QkE8gNaI0si81tko_XlfzaLzHnam_rVuLIkuv8KuyPfwQ7Qp9UIUrYE8LBYjK_dok25JJbtJ9rsGMrRLwLdz7o1KBvf4bTDia0D86u8",
+    alt: "Equipo creativo trabajando alrededor de una mesa",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBGWJmyHcTYnH_gskGshH641LXQtrH64QJEPMkFM84MBNTRewYLPuP-H05PZWoOlzZ9NMDPMUPR0doxoUsYehkjZa9tHJdaabY0R213U9QzpfVQBQ9E-OQ0XMhsRyjQJBtXZzWfraz4mGDJpKkiFLb-1VsHnsXnqOtcLocWc_mQWfoiyVCRI2cj9bL0k-nJhu98hJ7CkaeoujemnVTs2cJrHs68BjFHfqJevQYKsPSmTs2I6PXPqIiQFXKVkDAVYTMxtudSrr8GSCc",
+    alt: "Espacio de trabajo minimalista con escritorio y ventanal",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCgGfIYP7V0nG1tw1c0mWrkAOszg1Sp2fwPiRXysfbGXXO5l1-Vw45inoVJ5s6qagJJ949wQKJV73qkycCQe7udlpU8JZcj9HEE6gHGkJuSbjDZUz7WWn34UOPnuFmKGD6soLuMHPYqcDn62bd_jT2SFMGQARcTDDGxj8m5iwStFb6QJMm88lztYAzmorlJp2tfWU73Baq3dLNlTtGc93Aaq9jLGghnaDXtK-rildJ19m61FREuOhqg0syvkZcRNykaYvryc6igc_M",
+    alt: "Reunión de profesionales en sala azul",
+  },
+] as const;

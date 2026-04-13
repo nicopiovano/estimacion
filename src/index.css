@@ -1,41 +1,57 @@
-*, *::before, *::after { box-sizing: border-box; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 :root {
-  --font-sans:  'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: var(--font-sans);
 
-  --color-bg:             #FAF8F5;
-  --color-bg-subtle:      #F4F0E8;
-  --color-bg-muted:       #ECE7DA;
+  --color-bg: #f7f9fb;
+  --color-bg-subtle: #f0f4f7;
+  --color-bg-muted: #dce4e8;
 
-  --color-border:         #DDD5C4;
-  --color-border-subtle:  #EAE4D8;
+  --color-surface: rgba(255, 255, 255, 0.82);
+  --color-surface-strong: #ffffff;
+  --color-surface-soft: #edf3f6;
+  --color-surface-interactive: #dce4e8;
 
-  --color-text:           #1C1916;
-  --color-text-secondary: #5C5047;
-  --color-text-muted:     #9E9082;
+  --color-border: rgba(80, 98, 103, 0.18);
+  --color-border-subtle: rgba(80, 98, 103, 0.1);
 
-  --color-accent:         #B5956A;
-  --color-accent-dark:    #8F7347;
-  --color-accent-bg:      #F6EDD8;
-  --color-accent-muted:   #EDE1C8;
+  --color-text: #2c3437;
+  --color-text-secondary: #506267;
+  --color-text-muted: #738289;
 
-  --color-success:        #5A8C58;
-  --color-success-bg:     #EDF5EC;
-  --color-danger:         #B85450;
-  --color-danger-bg:      #F8ECEC;
-  --color-warning:        #B08A3C;
-  --color-warning-bg:     #F8F0E0;
+  --color-accent: #1b6399;
+  --color-accent-dark: #144b74;
+  --color-accent-bg: #dcecf7;
+  --color-accent-muted: #ebf3f8;
 
-  --radius-sm:   4px;
-  --radius-md:   7px;
-  --radius-lg:   10px;
-  --radius-xl:   14px;
+  --color-secondary: #506267;
+  --color-secondary-bg: #e7eef2;
+  --color-tertiary: #6d5d40;
+  --color-tertiary-bg: #f1ebe2;
+
+  --color-success: #2b7a5d;
+  --color-success-bg: #eaf4ef;
+  --color-danger: #9a4f4f;
+  --color-danger-bg: #f8eded;
+  --color-warning: #8e6f2d;
+  --color-warning-bg: #f7f0de;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
   --radius-full: 9999px;
 
-  --shadow-sm: 0 1px 4px rgba(80,60,40,0.07), 0 1px 2px rgba(80,60,40,0.04);
-  --shadow-md: 0 4px 16px rgba(80,60,40,0.09), 0 2px 6px rgba(80,60,40,0.05);
-  --shadow-lg: 0 8px 32px rgba(80,60,40,0.11), 0 4px 14px rgba(80,60,40,0.06);
+  --shadow-sm: 0 8px 20px rgba(27, 99, 153, 0.05);
+  --shadow-md: 0 16px 36px rgba(27, 99, 153, 0.08);
+  --shadow-lg: 0 28px 60px rgba(27, 99, 153, 0.1);
+}
+
+html {
+  background: var(--color-bg);
 }
 
 body {
@@ -44,9 +60,28 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--color-text);
-  background: var(--color-bg);
+  background:
+    radial-gradient(circle at top left, rgba(27, 99, 153, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(109, 93, 64, 0.09), transparent 22%),
+    linear-gradient(180deg, #f9fbfd 0%, #f3f7fa 100%);
   font-size: 15px;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
-#root { min-height: 100vh; }
+body::selection {
+  background: rgba(27, 99, 153, 0.16);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}

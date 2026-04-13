@@ -2,11 +2,11 @@
 
 .title {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: 0.87rem;
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
   color: var(--color-text-secondary);
-  letter-spacing: 0.01em;
+  letter-spacing: -0.02em;
 }
 
 .list {
@@ -15,24 +15,26 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
 .item {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.84rem;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
   color: var(--color-text-secondary);
+  line-height: 1.65;
 }
 
 .dot {
-  width: 5px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
   border-radius: var(--radius-full);
-  background: var(--color-accent);
+  background: var(--color-tertiary);
   flex-shrink: 0;
   opacity: 0.8;
+  margin-top: 0.45rem;
 }
 
 .empty {

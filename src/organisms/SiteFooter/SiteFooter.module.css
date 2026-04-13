@@ -1,0 +1,30 @@
+.footer {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2.25rem 0 1.5rem;
+  text-align: center;
+}
+
+.copy {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #a8b3ba;
+}
+
+.copyLink {
+  color: var(--color-accent-dark);
+  text-decoration: none;
+}
+
+.copyLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+  .footer {
+    width: calc(100% - 1.25rem);
+  }
+}

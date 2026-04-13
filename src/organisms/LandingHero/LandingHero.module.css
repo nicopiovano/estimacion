@@ -1,0 +1,147 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.9fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.copy {
+  max-width: 42rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: rgba(210, 230, 236, 0.75);
+  color: var(--color-secondary);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.badgeIcon {
+  color: var(--color-accent);
+}
+
+.title {
+  margin: 1.4rem 0 1rem;
+  font-size: clamp(3.2rem, 6vw, 5.8rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.08em;
+  color: var(--color-text);
+}
+
+.description {
+  margin: 0;
+  max-width: 36rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.buttonIcon {
+  font-size: 1rem;
+}
+
+.socialProof {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.socialText {
+  margin: 0;
+  font-size: 0.98rem;
+  color: var(--color-text-secondary);
+}
+
+.socialText strong {
+  color: var(--color-accent);
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  gap: 1rem;
+  min-height: 38rem;
+}
+
+.mainImage,
+.sideImage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2.5rem;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.mainImage {
+  min-height: 38rem;
+}
+
+.sideImages {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.mainImage::after,
+.sideImage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(27, 99, 153, 0.02), rgba(27, 99, 153, 0.16));
+}
+
+.mainImage img,
+.sideImage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .collage {
+    min-height: auto;
+  }
+
+  .mainImage {
+    min-height: 26rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .collage {
+    grid-template-columns: 1fr;
+  }
+
+  .sideImages {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+  }
+}

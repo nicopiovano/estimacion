@@ -1,18 +1,25 @@
+import type { ButtonHTMLAttributes } from 'react';
 import styles from './Button.module.css';
 
-type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'ghost';
+type ButtonVariant =
+  | 'primary'
+  | 'secondary'
+  | 'danger'
+  | 'ghost'
+  /** Solo reset mínimo; el aspecto lo define `className` (p. ej. cards del wizard). */
+  | 'unstyled';
+
 type ButtonSize = 'sm' | 'md' | 'lg';
 
-interface ButtonProps {
+type ButtonProps = {
   children: React.ReactNode;
-  onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   variant?: ButtonVariant;
   size?: ButtonSize;
-  disabled?: boolean;
   loading?: boolean;
   fullWidth?: boolean;
-}
+  className?: string;
+} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'className'>;
 
 export function Button({
   children,
@@ -23,7 +30,11 @@ export function Button({
   disabled = false,
   loading = false,
   fullWidth = false,
+  className = '',
+  ...rest
 }: ButtonProps) {
+  const sizeClass = variant === 'unstyled' ? '' : styles[size];
+
   return (
     <button
       type={type}
@@ -32,9 +43,13 @@ export function Button({
       className={[
         styles.btn,
         styles[variant],
-        styles[size],
+        sizeClass,
         fullWidth ? styles.fullWidth : '',
-      ].join(' ')}
+        className,
+      ]
+        .filter(Boolean)
+        .join(' ')}
+      {...rest}
     >
       {loading ? <span className={styles.spinner} /> : null}
       {children}

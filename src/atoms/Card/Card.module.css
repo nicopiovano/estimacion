@@ -1,35 +1,35 @@
 .card {
-  background: rgba(250,248,245,0.85);
+  background: var(--color-surface);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
+  border: 1px solid transparent;
+  backdrop-filter: blur(18px);
 }
 
 .elevated {
   box-shadow: var(--shadow-md);
-  border-color: rgba(221,213,196,0.5);
+  border-color: rgba(255, 255, 255, 0.48);
 }
 
-.sm { padding: 10px 12px; }
-.md { padding: 18px 22px; }
-.lg { padding: 28px 32px; }
+.sm { padding: 14px 16px; }
+.md { padding: 22px 24px; }
+.lg { padding: 30px 32px; }
 
 .header {
-  margin-bottom: 14px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--color-border-subtle);
+  margin-bottom: 16px;
 }
 
 .title {
-  margin: 0 0 3px;
-  font-family: var(--font-serif);
+  margin: 0 0 4px;
+  font-family: var(--font-sans);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--color-text);
 }
 
 .subtitle {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--color-text-muted);
 }
 
