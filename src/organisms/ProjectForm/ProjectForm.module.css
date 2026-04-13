@@ -1,0 +1,244 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Question block */
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.questionHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.qNum {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  background: var(--color-accent-bg);
+  color: var(--color-accent-dark);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.qLabel {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.qHint {
+  margin: 3px 0 0;
+  font-size: 0.79rem;
+  color: var(--color-text-muted);
+}
+
+/* Textarea + mic */
+.textareaWrapper { position: relative; }
+
+.textarea {
+  width: 100%;
+  padding: 11px 14px 40px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-text);
+  background: rgba(250,248,245,0.9);
+  resize: vertical;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  line-height: 1.65;
+}
+
+.textarea::placeholder { color: var(--color-text-muted); }
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(181,149,106,0.15);
+}
+
+.textareaError { border-color: var(--color-danger); }
+
+.micBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: var(--color-bg);
+  color: var(--color-accent-dark);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 5px 13px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  font-family: var(--font-sans);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.micBtn:hover {
+  background: var(--color-accent-bg);
+  border-color: var(--color-accent);
+}
+
+.micBtnActive {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.65; }
+}
+
+/* Chip row */
+.chipRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-bg);
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s;
+  text-align: left;
+}
+
+.chip:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent-dark);
+  background: var(--color-accent-bg);
+}
+
+.chipOn {
+  background: var(--color-accent-bg);
+  border-color: var(--color-accent);
+  color: var(--color-accent-dark);
+  font-weight: 600;
+}
+
+/* Chip stacked (label + sub) */
+.chipStack {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 10px 16px;
+  border-radius: var(--radius-lg);
+  min-width: 140px;
+}
+
+.chipMain { font-size: 0.86rem; font-weight: 600; }
+.chipSub  { font-size: 0.74rem; color: var(--color-text-muted); font-weight: 400; }
+.chipOn .chipSub { color: var(--color-accent); opacity: 0.8; }
+
+/* Model cards */
+.modelGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.modelCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 14px 15px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.18s;
+  font-family: var(--font-sans);
+}
+
+.modelCard:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-bg);
+}
+
+.modelCardOn {
+  border-color: var(--color-accent);
+  background: var(--color-accent-bg);
+}
+
+.modelIcon  { font-size: 1.3rem; }
+.modelLabel { font-size: 0.87rem; font-weight: 600; color: var(--color-text); }
+.modelDesc  { font-size: 0.74rem; color: var(--color-text-muted); line-height: 1.4; }
+
+/* Price input */
+.priceBox {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.priceLabel { font-size: 0.82rem; font-weight: 500; color: var(--color-text-secondary); }
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.priceSym { font-size: 1.1rem; color: var(--color-text-muted); font-weight: 500; }
+
+.priceField {
+  width: 86px;
+  padding: 7px 10px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text);
+  background: var(--color-bg);
+  text-align: center;
+}
+
+.priceField:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(181,149,106,0.15);
+}
+
+.priceUnit { font-size: 0.79rem; color: var(--color-text-muted); }
+
+.error { font-size: 0.76rem; color: var(--color-danger); margin: 0; }

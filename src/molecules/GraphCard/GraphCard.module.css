@@ -1,0 +1,65 @@
+.graphCard {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 160px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.cardTitle {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.cardSubtitle {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.icon {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.valueRow {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.value {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.unit {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.trend {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.up { color: var(--color-success); }
+.down { color: var(--color-danger); }
+.neutral { color: var(--color-text-muted); }

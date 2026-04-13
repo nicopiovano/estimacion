@@ -1,0 +1,22 @@
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.errorBanner {
+  background: var(--color-danger-bg);
+  color: #8B3D3A;
+  border: 1px solid rgba(184,84,80,0.2);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 0.85rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-border-subtle);
+}

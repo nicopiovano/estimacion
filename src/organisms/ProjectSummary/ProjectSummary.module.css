@@ -1,0 +1,48 @@
+.container { display: flex; flex-direction: column; gap: 18px; }
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tipoTag {
+  background: var(--color-accent-bg);
+  color: var(--color-accent-dark);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+}
+
+.complejidadTag {
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.baja     { background: #EDF5EC; color: #3A6B38; }
+.media    { background: #F7F1E2; color: #7A5C1E; }
+.alta     { background: #F6ECEC; color: #8B3D3A; }
+.muy_alta { background: #F4EBF2; color: #7A3559; }
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.listsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .listsRow { grid-template-columns: 1fr; }
+}
