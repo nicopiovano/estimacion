@@ -240,7 +240,9 @@ export function ProjectForm({
                 type="button"
                 variant="unstyled"
                 className={`${styles.optionCard} ${
-                  form.plataforma === option.value ? styles.optionCardActive : ""
+                  form.plataforma === option.value
+                    ? styles.optionCardActive
+                    : ""
                 }`}
                 onClick={() => selectSingleOption("plataforma", option.value)}
               >
@@ -464,7 +466,7 @@ export function ProjectForm({
 
         {currentField === "descripcion" ? (
           <Button type="submit" loading={loading} size="lg">
-            Ver resumen inteligente
+            Cotizar idea
           </Button>
         ) : null}
       </div>
