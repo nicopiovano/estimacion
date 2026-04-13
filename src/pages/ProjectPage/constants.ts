@@ -49,14 +49,14 @@ export const IDEA_CUANDO_LABELS: Record<string, string> = {
 
 /** Gastos extra que siempre aplican (dominio + hosting). */
 export const GASTOS_EXTRA_BASE = [
-  { label: "Dominio (.com)", value: "~U$S15 / año" },
-  { label: "Hosting web", value: "desde U$S60 / año" },
+  { label: "Dominio (.com)", value: "~$15 / año" },
+  { label: "Hosting web", value: "desde $60 / año" },
 ] as const;
 
 /** Gastos extra solo cuando el proyecto incluye app móvil. */
 export const GASTOS_EXTRA_APP = [
-  { label: "Apple Developer (App Store)", value: "U$S99 / año" },
-  { label: "Google Play (Play Store)", value: "U$S25 único" },
+  { label: "Apple Developer (App Store)", value: "$99 / año" },
+  { label: "Google Play (Play Store)", value: "$25 único" },
 ] as const;
 
 /** Etiquetas cortas para mostrar en el resumen de resultados. */

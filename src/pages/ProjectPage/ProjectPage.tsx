@@ -62,7 +62,9 @@ export function ProjectPage() {
   const [analyzeResult, setAnalyzeResult] = useState<AnalyzeResponse | null>(
     null,
   );
-  const [lastFormData, setLastFormData] = useState<ProjectFormData | null>(null);
+  const [lastFormData, setLastFormData] = useState<ProjectFormData | null>(
+    null,
+  );
   const [cuandoElegido, setCuandoElegido] = useState<string>("");
   const [plataformaElegida, setPlataformaElegida] = useState<string>("");
 
@@ -198,7 +200,9 @@ export function ProjectPage() {
 
                   <hr className={styles.detailSeparator} />
 
-                  <h3 className={styles.detailTitle}>Gastos adicionales</h3>
+                  <h3 className={styles.detailTitle}>
+                    Gastos adicionales (USD)
+                  </h3>
                   <p className={styles.detailNote}>
                     No incluidos en el presupuesto. Son costos de terceros que
                     el cliente abona por separado.
